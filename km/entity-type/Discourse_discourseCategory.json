@@ -1,0 +1,46 @@
+{
+  "$id": "Discourse_discourseCategory",
+  "$schema": "https://schema.yext.com/config/km/entity-type/v1",
+  "description": "",
+  "displayName": "Discourse Category",
+  "enabled": true,
+  "field": [
+    {
+      "id": "slug",
+      "required": false
+    },
+    {
+      "id": "description",
+      "required": false
+    },
+    {
+      "id": "name",
+      "required": true
+    },
+    {
+      "id": "discourse_avatar",
+      "required": false
+    },
+    {
+      "id": "discourse_postCount",
+      "required": false
+    },
+    {
+      "id": "discourse_topicCount",
+      "required": false
+    },
+    {
+      "id": "folder",
+      "required": false
+    },
+    {
+      "id": "labels",
+      "required": false
+    },
+    {
+      "id": "entityId",
+      "required": true
+    }
+  ],
+  "pluralDisplayName": "Discourse Categories"
+}

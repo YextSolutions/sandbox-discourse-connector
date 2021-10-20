@@ -1,0 +1,74 @@
+{
+  "$id": "Discourse_discourseTopic",
+  "$schema": "https://schema.yext.com/config/km/entity-type/v1",
+  "description": "",
+  "displayName": "Discourse Topic",
+  "enabled": true,
+  "field": [
+    {
+      "id": "slug",
+      "required": false
+    },
+    {
+      "id": "views",
+      "required": false
+    },
+    {
+      "id": "name",
+      "required": true
+    },
+    {
+      "id": "discourse_answerAccepted",
+      "required": false
+    },
+    {
+      "id": "discourse_categoryID",
+      "required": false
+    },
+    {
+      "id": "discourse_dateCreatedAt",
+      "required": false
+    },
+    {
+      "id": "discourse_discourseThread",
+      "required": false
+    },
+    {
+      "id": "discourse_firstDiscoursePost",
+      "required": false
+    },
+    {
+      "id": "discourse_lastPostedAt",
+      "required": false
+    },
+    {
+      "id": "discourse_likesReceived",
+      "required": false
+    },
+    {
+      "id": "discourse_postCount",
+      "required": false
+    },
+    {
+      "id": "discourse_replyCount",
+      "required": false
+    },
+    {
+      "id": "folder",
+      "required": false
+    },
+    {
+      "id": "photoGallery",
+      "required": false
+    },
+    {
+      "id": "labels",
+      "required": false
+    },
+    {
+      "id": "entityId",
+      "required": true
+    }
+  ],
+  "pluralDisplayName": "Discourse Topics"
+}

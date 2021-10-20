@@ -1,0 +1,13 @@
+{
+  "$id": "discourse_username",
+  "$schema": "https://schema.yext.com/config/km/field/v1",
+  "displayName": "Username",
+  "group": "NONE",
+  "localization": "PRIMARY_ONLY",
+  "type": {
+    "stringType": {
+      "stereotype": "SIMPLE"
+    }
+  },
+  "typeId": "string"
+}

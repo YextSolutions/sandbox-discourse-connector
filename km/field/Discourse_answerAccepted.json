@@ -1,0 +1,8 @@
+{
+  "$id": "discourse_answerAccepted",
+  "$schema": "https://schema.yext.com/config/km/field/v1",
+  "displayName": "Answer Accepted",
+  "group": "NONE",
+  "localization": "PRIMARY_ONLY",
+  "typeId": "discourse_discoursePost"
+}

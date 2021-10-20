@@ -1,0 +1,16 @@
+{
+  "$id": "discourse_categoryID",
+  "$schema": "https://schema.yext.com/config/km/field/v1",
+  "displayName": "Category ID",
+  "group": "NONE",
+  "localization": "PRIMARY_ONLY",
+  "type": {
+    "listType": {
+      "typeId": "entityReference",
+      "type": {
+        "entityReferenceType": {}
+      }
+    }
+  },
+  "typeId": "list"
+}

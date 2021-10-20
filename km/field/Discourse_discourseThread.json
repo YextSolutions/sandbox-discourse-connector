@@ -1,0 +1,13 @@
+{
+  "$id": "discourse_discourseThread",
+  "$schema": "https://schema.yext.com/config/km/field/v1",
+  "displayName": "Discourse Thread",
+  "group": "NONE",
+  "localization": "PRIMARY_ONLY",
+  "type": {
+    "listType": {
+      "typeId": "discourse_discoursePost"
+    }
+  },
+  "typeId": "list"
+}

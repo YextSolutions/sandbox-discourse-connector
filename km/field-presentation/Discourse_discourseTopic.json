@@ -1,0 +1,90 @@
+{
+  "$id": "Discourse_discourseTopic",
+  "$schema": "https://schema.yext.com/config/km/field-presentation/v1",
+  "entityType": "Discourse_discourseTopic",
+  "displayName": "Discourse Topic",
+  "presentationEntries": [
+    {
+      "displayName": "Content",
+      "entryType": "DIVIDER"
+    },
+    {
+      "displayName": "Core Information",
+      "entryType": "SECTION",
+      "fields": [
+        {
+          "id": "entityId",
+          "visibleOnAdd": true
+        },
+        {
+          "id": "name",
+          "visibleOnAdd": true
+        },
+        {
+          "id": "discourse_categoryID"
+        },
+        {
+          "id": "slug"
+        },
+        {
+          "id": "photoGallery"
+        }
+      ]
+    },
+    {
+      "displayName": "Posts",
+      "entryType": "SECTION",
+      "fields": [
+        {
+          "id": "discourse_firstDiscoursePost"
+        },
+        {
+          "id": "discourse_discourseThread"
+        },
+        {
+          "id": "discourse_answerAccepted"
+        }
+      ]
+    },
+    {
+      "displayName": "Metrics",
+      "entryType": "SECTION",
+      "fields": [
+        {
+          "id": "discourse_dateCreatedAt"
+        },
+        {
+          "id": "discourse_lastPostedAt"
+        },
+        {
+          "id": "discourse_postCount"
+        },
+        {
+          "id": "discourse_replyCount"
+        },
+        {
+          "id": "discourse_likesReceived"
+        },
+        {
+          "id": "views"
+        }
+      ]
+    },
+    {
+      "displayName": "Other",
+      "entryType": "DIVIDER"
+    },
+    {
+      "displayName": "Internal Use Only",
+      "entryType": "SECTION",
+      "fields": [
+        {
+          "id": "folder"
+        },
+        {
+          "id": "labels"
+        }
+      ]
+    }
+  ]
+}

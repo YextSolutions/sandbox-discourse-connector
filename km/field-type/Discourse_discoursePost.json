@@ -1,0 +1,106 @@
+{
+  "$id": "discourse_discoursePost",
+  "$schema": "https://schema.yext.com/config/km/field-type/v1",
+  "displayName": "Discourse Post",
+  "type": {
+    "structType": {
+      "property": [
+        {
+          "name": "text",
+          "displayName": "Text",
+          "isRequired": false,
+          "typeId": "richText",
+          "type": {
+            "richTextType": {
+              "supportedFormat": [
+                "BLOCK_QUOTE",
+                "BOLD",
+                "BULLETED_LIST",
+                "CODE_BLOCK",
+                "CODE_SPAN",
+                "HEADINGS",
+                "HORIZONTAL_LINE",
+                "HYPERLINK",
+                "IMAGE",
+                "ITALICS",
+                "NUMBERED_LIST",
+                "STRIKETHROUGH",
+                "SUBSCRIPT",
+                "SUPERSCRIPT",
+                "UNDERLINE"
+              ]
+            }
+          }
+        },
+        {
+          "name": "acceptedAnswer",
+          "displayName": "Accepted Answer",
+          "isRequired": false,
+          "typeId": "string",
+          "type": {
+            "stringType": {
+              "stereotype": "SIMPLE"
+            }
+          }
+        },
+        {
+          "name": "author",
+          "displayName": "Author",
+          "isRequired": false,
+          "typeId": "string",
+          "type": {
+            "stringType": {
+              "stereotype": "SIMPLE"
+            }
+          }
+        },
+        {
+          "name": "username",
+          "displayName": "Username",
+          "isRequired": false,
+          "typeId": "string",
+          "type": {
+            "stringType": {
+              "stereotype": "SIMPLE"
+            }
+          }
+        },
+        {
+          "name": "avatar",
+          "displayName": "Avatar",
+          "isRequired": false,
+          "typeId": "image",
+          "type": {
+            "imageType": {
+              "isSimpleImage": true,
+              "minSize": {
+                "width": 0,
+                "height": 0
+              },
+              "unconstrainedAspectRatioAllowed": true,
+              "noAllowedAspectRatios": true
+            }
+          }
+        },
+        {
+          "name": "postNumber",
+          "displayName": "Post Number",
+          "isRequired": false,
+          "typeId": "decimal",
+          "type": {
+            "decimalType": {}
+          }
+        },
+        {
+          "name": "topicID",
+          "displayName": "Topic ID",
+          "isRequired": false,
+          "typeId": "decimal",
+          "type": {
+            "decimalType": {}
+          }
+        }
+      ]
+    }
+  }
+}
