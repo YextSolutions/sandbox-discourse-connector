@@ -452,7 +452,7 @@
     }
   ],
   "scheduleConfig": {
-    "useSourceSchedule": false,
+    "useSourceSchedule": true,
     "runMode": "DEFAULT"
   }
 }
