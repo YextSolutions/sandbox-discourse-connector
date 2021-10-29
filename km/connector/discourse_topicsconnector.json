@@ -250,7 +250,7 @@
       ]
     },
     {
-      "field": "slug",
+      "field": "discourse_slug",
       "header": "Slug",
       "subfieldPath": []
     },

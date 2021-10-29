@@ -24,7 +24,7 @@
           "id": "description"
         },
         {
-          "id": "slug"
+          "id": "discourse_slug"
         },
         {
           "id": "discourse_avatar"

@@ -24,7 +24,7 @@
           "id": "discourse_categoryID"
         },
         {
-          "id": "slug"
+          "id": "discourse_slug"
         },
         {
           "id": "photoGallery"
