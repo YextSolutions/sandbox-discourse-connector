@@ -165,6 +165,16 @@
         "type": "JSON",
         "header": "Accepted Answer Avatar",
         "path": "acceptedAnswer.value.avatar_template"
+      },
+      {
+        "type": "JSON",
+        "header": "Likes Received",
+        "path": "like_count"
+      },
+      {
+        "type": "JSON",
+        "header": "Views",
+        "path": "views"
       }
     ]
   },
@@ -449,6 +459,16 @@
       "subfieldPath": [{
         "name": "author"
       }]
+    },
+    {
+      "field": "discourse_likesReceived",
+      "header": "Likes Received",
+      "subfieldPath": []
+    },
+    {
+      "field": "discourse_views",
+      "header": "Views",
+      "subfieldPath": []
     }
   ],
   "scheduleConfig": {

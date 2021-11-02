@@ -10,7 +10,7 @@
       "required": false
     },
     {
-      "id": "views",
+      "id": "discourse_views",
       "required": false
     },
     {
