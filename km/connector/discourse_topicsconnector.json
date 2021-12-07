@@ -100,37 +100,37 @@
       {
         "type": "JSON",
         "header": "Thread Username",
-        "path": "thread[].username"
+        "path": "thread[*].username"
       },
       {
         "type": "JSON",
         "header": "Thread Text",
-        "path": "thread[].cooked"
+        "path": "thread[*].cooked"
       },
       {
         "type": "JSON",
         "header": "Thread Author",
-        "path": "thread[].name"
+        "path": "thread[*].name"
       },
       {
         "type": "JSON",
         "header": "Thread Number",
-        "path": "thread[].post_number"
+        "path": "thread[*].post_number"
       },
       {
         "type": "JSON",
         "header": "Thread Topic ID",
-        "path": "thread[].topic_id"
+        "path": "thread[*].topic_id"
       },
       {
         "type": "JSON",
         "header": "Thread is Accepted Answer",
-        "path": "thread[].accepted_answer"
+        "path": "thread[*].accepted_answer"
       },
       {
         "type": "JSON",
         "header": "Thread Avatar",
-        "path": "thread[].avatar_template"
+        "path": "thread[*].avatar_template"
       },
       {
         "type": "JSON",
@@ -221,6 +221,19 @@
           }
         },
         "replacement": "120"
+      }
+    },
+    {
+      "function": {
+        "inputHeaders": {
+          "headers": [
+            "First Post Avatar",
+            "Thread Avatar",
+            "Accepted Answer Avatar"
+          ]
+        },
+        "plugin": "discourse_urlTransform",
+        "function": "fix_avatar_template"
       }
     }
   ],
