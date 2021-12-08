@@ -95,7 +95,7 @@
       {
         "type": "JSON",
         "header": "First Post Avatar",
-        "path": "firstPost.value.avatar_template"
+        "path": "firstPost.value.sanitizedAvatarTemplate"
       },
       {
         "type": "JSON",
@@ -130,7 +130,7 @@
       {
         "type": "JSON",
         "header": "Thread Avatar",
-        "path": "thread[*].avatar_template"
+        "path": "thread[*].sanitizedAvatarTemplate"
       },
       {
         "type": "JSON",
@@ -165,7 +165,7 @@
       {
         "type": "JSON",
         "header": "Accepted Answer Avatar",
-        "path": "acceptedAnswer.value.avatar_template"
+        "path": "acceptedAnswer.value.sanitizedAvatarTemplate"
       },
       {
         "type": "JSON",
