@@ -2,7 +2,7 @@
   "$id": "discourse_discourseTopicsConnector",
   "$schema": "https://schema.yext.com/config/km/connector/v2",
   "displayName": "Discourse Topics Connector",
-  "entityType": "Discourse_discourseTopic",
+  "entityType": "discourse_discourseTopic",
   "source": {
     "sourceConfig": {
       "apiPushConfig": {
