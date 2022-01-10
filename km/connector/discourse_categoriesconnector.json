@@ -2,7 +2,7 @@
   "$id": "discourse_discourseCategoriesConnector",
   "$schema": "https://schema.yext.com/config/km/connector/v2",
   "displayName": "Discourse Categories Connector",
-  "entityType": "Discourse_discourseCategory",
+  "entityType": "discourse_discourseCategory",
   "source": {
     "sourceConfig": {
       "apiPushConfig": {
