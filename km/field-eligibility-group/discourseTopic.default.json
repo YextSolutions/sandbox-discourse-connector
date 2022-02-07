@@ -1,0 +1,20 @@
+{
+  "$id": "discourse_discourseTopic.default",
+  "$schema": "https://schema.yext.com/config/km/field-eligibility-group/v1",
+  "name": "Discourse Topic-default",
+  "entityType": "discourse_discourseTopic",
+  "fields": [
+    "discourse_slug",
+    "discourse_views",
+    "discourse_answerAccepted",
+    "discourse_categoryID",
+    "discourse_dateCreatedAt",
+    "discourse_discourseThread",
+    "discourse_firstDiscoursePost",
+    "discourse_lastPostedAt",
+    "discourse_likesReceived",
+    "discourse_postCount",
+    "discourse_replyCount",
+    "photoGallery"
+  ]
+}

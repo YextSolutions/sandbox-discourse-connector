@@ -1,0 +1,13 @@
+{
+  "$id": "discourse_discourseCategory.default",
+  "$schema": "https://schema.yext.com/config/km/field-eligibility-group/v1",
+  "name": "Discourse Category-default",
+  "entityType": "discourse_discourseCategory",
+  "fields": [
+    "discourse_slug",
+    "description",
+    "discourse_avatar",
+    "discourse_postCount",
+    "discourse_topicCount"
+  ]
+}
