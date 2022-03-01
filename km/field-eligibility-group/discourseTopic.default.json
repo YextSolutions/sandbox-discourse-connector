@@ -1,5 +1,5 @@
 {
-  "$id": "discourse_discourseTopic.default",
+  "$id": "discourse_discourseTopic",
   "$schema": "https://schema.yext.com/config/km/field-eligibility-group/v1",
   "name": "Discourse Topic-default",
   "entityType": "discourse_discourseTopic",
