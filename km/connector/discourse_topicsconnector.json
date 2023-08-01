@@ -257,9 +257,12 @@
             "field": "discourse_firstDiscoursePost",
             "header": "First Post Text",
             "subfieldPath": [
-                {
-                    "name": "text"
-                }
+        {
+          "name": "text"
+        },
+        {
+          "name": "markdown"
+        }
             ]
         },
         {
@@ -418,9 +421,12 @@
             "field": "discourse_discourseThread",
             "header": "Thread Text",
             "subfieldPath": [
-                {
-                    "name": "text"
-                }
+        {
+          "name": "text"
+        },
+        {
+          "name": "markdown"
+        }
             ]
         },
         {
