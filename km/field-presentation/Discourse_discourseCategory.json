@@ -1,63 +1,63 @@
 {
-  "$id": "discourse_discourseCategory",
-  "$schema": "https://schema.yext.com/config/km/field-presentation/v1",
-  "entityType": "discourse_discourseCategory",
-  "displayName": "Discourse Category",
-  "presentationEntries": [
-    {
-      "displayName": "Content",
-      "entryType": "DIVIDER"
-    },
-    {
-      "displayName": "Core Information",
-      "entryType": "SECTION",
-      "fields": [
+    "$id": "discourse_discourseCategory",
+    "$schema": "https://schema.yext.com/config/km/field-presentation/v1",
+    "entityType": "discourse_discourseCategory",
+    "displayName": "Discourse Category",
+    "presentationEntries": [
         {
-          "id": "name",
-          "visibleOnAdd": true
+            "displayName": "Content",
+            "entryType": "DIVIDER"
         },
         {
-          "id": "entityId",
-          "visibleOnAdd": true
+            "displayName": "Core Information",
+            "entryType": "SECTION",
+            "fields": [
+                {
+                    "id": "name",
+                    "visibleOnAdd": true
+                },
+                {
+                    "id": "entityId",
+                    "visibleOnAdd": true
+                },
+                {
+                    "id": "description"
+                },
+                {
+                    "id": "discourse_slug"
+                },
+                {
+                    "id": "discourse_avatar"
+                }
+            ]
         },
         {
-          "id": "description"
+            "displayName": "Metrics",
+            "entryType": "SECTION",
+            "fields": [
+                {
+                    "id": "discourse_topicCount"
+                },
+                {
+                    "id": "discourse_postCount"
+                }
+            ]
         },
         {
-          "id": "discourse_slug"
+            "displayName": "Other",
+            "entryType": "DIVIDER"
         },
         {
-          "id": "discourse_avatar"
+            "displayName": "Internal Use Only",
+            "entryType": "SECTION",
+            "fields": [
+                {
+                    "id": "folder"
+                },
+                {
+                    "id": "labels"
+                }
+            ]
         }
-      ]
-    },
-    {
-      "displayName": "Metrics",
-      "entryType": "SECTION",
-      "fields": [
-        {
-          "id": "discourse_topicCount"
-        },
-        {
-          "id": "discourse_postCount"
-        }
-      ]
-    },
-    {
-      "displayName": "Other",
-      "entryType": "DIVIDER"
-    },
-    {
-      "displayName": "Internal Use Only",
-      "entryType": "SECTION",
-      "fields": [
-        {
-          "id": "folder"
-        },
-        {
-          "id": "labels"
-        }
-      ]
-    }
-  ]
+    ]
 }

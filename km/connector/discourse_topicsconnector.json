@@ -1,488 +1,507 @@
 {
-  "$id": "discourse_discourseTopicsConnector",
-  "$schema": "https://schema.yext.com/config/km/connector/v2",
-  "displayName": "Discourse Topics Connector",
-  "entityType": "discourse_discourseTopic",
-  "source": {
-    "sourceConfig": {
-      "apiPushConfig": {
-        "app": "123672",
-        "dataFormat": "JSON",
-        "enabled": true
-      }
+    "$id": "discourse_discourseTopicsConnector",
+    "$schema": "https://schema.yext.com/config/km/connector/v4",
+    "displayName": "Discourse Topics Connector",
+    "entityTypes": [
+        "discourse_discourseTopic"
+    ],
+    "source": {
+        "sourceConfig": {
+            "apiPushConfig": {
+                "dataFormat": "JSON",
+                "enabled": true
+            }
+        },
+        "baseSelector": {
+            "type": "JSON",
+            "header": "Entity Container",
+            "path": "topics"
+        },
+        "selectors": [
+            {
+                "type": "JSON",
+                "header": "Entity ID",
+                "path": "id"
+            },
+            {
+                "type": "JSON",
+                "header": "Name",
+                "path": "title"
+            },
+            {
+                "type": "JSON",
+                "header": "Slug",
+                "path": "slug"
+            },
+            {
+                "type": "JSON",
+                "header": "Number of Posts",
+                "path": "posts_count"
+            },
+            {
+                "type": "JSON",
+                "header": "Number of Replies",
+                "path": "reply_count"
+            },
+            {
+                "type": "JSON",
+                "header": "Date Created",
+                "path": "created_at"
+            },
+            {
+                "type": "JSON",
+                "header": "Date of Last Post",
+                "path": "last_posted_at"
+            },
+            {
+                "type": "JSON",
+                "header": "Category ID",
+                "path": "category_id"
+            },
+            {
+                "type": "JSON",
+                "header": "Image Url",
+                "path": "image_url"
+            },
+            {
+                "type": "JSON",
+                "header": "First Post Username",
+                "path": "firstPost.value.name"
+            },
+            {
+                "type": "JSON",
+                "header": "First Post Text",
+                "path": "firstPost.value.cooked"
+            },
+            {
+                "type": "JSON",
+                "header": "First Post Author",
+                "path": "firstPost.value.name"
+            },
+            {
+                "type": "JSON",
+                "header": "First Post Number",
+                "path": "firstPost.value.post_number"
+            },
+            {
+                "type": "JSON",
+                "header": "First Post Topic ID",
+                "path": "firstPost.value.topic_id"
+            },
+            {
+                "type": "JSON",
+                "header": "First Post is Accepted Answer",
+                "path": "firstPost.value.accepted_answer"
+            },
+            {
+                "type": "JSON",
+                "header": "First Post Avatar",
+                "path": "firstPost.value.sanitizedAvatarTemplate"
+            },
+            {
+                "type": "JSON",
+                "header": "Thread Username",
+                "path": "thread[*].username"
+            },
+            {
+                "type": "JSON",
+                "header": "Thread Text",
+                "path": "thread[*].cooked"
+            },
+            {
+                "type": "JSON",
+                "header": "Thread Author",
+                "path": "thread[*].name"
+            },
+            {
+                "type": "JSON",
+                "header": "Thread Number",
+                "path": "thread[*].post_number"
+            },
+            {
+                "type": "JSON",
+                "header": "Thread Topic ID",
+                "path": "thread[*].topic_id"
+            },
+            {
+                "type": "JSON",
+                "header": "Thread is Accepted Answer",
+                "path": "thread[*].accepted_answer"
+            },
+            {
+                "type": "JSON",
+                "header": "Thread Avatar",
+                "path": "thread[*].sanitizedAvatarTemplate"
+            },
+            {
+                "type": "JSON",
+                "header": "Accepted Answer Username",
+                "path": "acceptedAnswer.value.name"
+            },
+            {
+                "type": "JSON",
+                "header": "Accepted Answer Text",
+                "path": "acceptedAnswer.value.cooked"
+            },
+            {
+                "type": "JSON",
+                "header": "Accepted Answer Author",
+                "path": "acceptedAnswer.value.name"
+            },
+            {
+                "type": "JSON",
+                "header": "Accepted Answer Number",
+                "path": "acceptedAnswer.value.post_number"
+            },
+            {
+                "type": "JSON",
+                "header": "Accepted Answer Topic ID",
+                "path": "acceptedAnswer.value.topic_id"
+            },
+            {
+                "type": "JSON",
+                "header": "Accepted Answer is Accepted Answer",
+                "path": "acceptedAnswer.value.accepted_answer"
+            },
+            {
+                "type": "JSON",
+                "header": "Accepted Answer Avatar",
+                "path": "acceptedAnswer.value.sanitizedAvatarTemplate"
+            },
+            {
+                "type": "JSON",
+                "header": "Likes Received",
+                "path": "like_count"
+            },
+            {
+                "type": "JSON",
+                "header": "Views",
+                "path": "views"
+            }
+        ]
     },
-    "baseSelector": {
-      "type": "JSON",
-      "header": "Entity Container",
-      "path": "topics"
-    },
-    "selectors": [
-      {
-        "type": "JSON",
-        "header": "Entity ID",
-        "path": "id"
-      },
-      {
-        "type": "JSON",
-        "header": "Name",
-        "path": "title"
-      },
-      {
-        "type": "JSON",
-        "header": "Slug",
-        "path": "slug"
-      },
-      {
-        "type": "JSON",
-        "header": "Number of Posts",
-        "path": "posts_count"
-      },
-      {
-        "type": "JSON",
-        "header": "Number of Replies",
-        "path": "reply_count"
-      },
-      {
-        "type": "JSON",
-        "header": "Date Created",
-        "path": "created_at"
-      },
-      {
-        "type": "JSON",
-        "header": "Date of Last Post",
-        "path": "last_posted_at"
-      },
-      {
-        "type": "JSON",
-        "header": "Category ID",
-        "path": "category_id"
-      },
-      {
-        "type": "JSON",
-        "header": "Image Url",
-        "path": "image_url"
-      },
-      {
-        "type": "JSON",
-        "header": "First Post Username",
-        "path": "firstPost.value.name"
-      },
-      {
-        "type": "JSON",
-        "header": "First Post Text",
-        "path": "firstPost.value.cooked"
-      },
-      {
-        "type": "JSON",
-        "header": "First Post Author",
-        "path": "firstPost.value.name"
-      },
-      {
-        "type": "JSON",
-        "header": "First Post Number",
-        "path": "firstPost.value.post_number"
-      },
-      {
-        "type": "JSON",
-        "header": "First Post Topic ID",
-        "path": "firstPost.value.topic_id"
-      },
-      {
-        "type": "JSON",
-        "header": "First Post is Accepted Answer",
-        "path": "firstPost.value.accepted_answer"
-      },
-      {
-        "type": "JSON",
-        "header": "First Post Avatar",
-        "path": "firstPost.value.sanitizedAvatarTemplate"
-      },
-      {
-        "type": "JSON",
-        "header": "Thread Username",
-        "path": "thread[*].username"
-      },
-      {
-        "type": "JSON",
-        "header": "Thread Text",
-        "path": "thread[*].cooked"
-      },
-      {
-        "type": "JSON",
-        "header": "Thread Author",
-        "path": "thread[*].name"
-      },
-      {
-        "type": "JSON",
-        "header": "Thread Number",
-        "path": "thread[*].post_number"
-      },
-      {
-        "type": "JSON",
-        "header": "Thread Topic ID",
-        "path": "thread[*].topic_id"
-      },
-      {
-        "type": "JSON",
-        "header": "Thread is Accepted Answer",
-        "path": "thread[*].accepted_answer"
-      },
-      {
-        "type": "JSON",
-        "header": "Thread Avatar",
-        "path": "thread[*].sanitizedAvatarTemplate"
-      },
-      {
-        "type": "JSON",
-        "header": "Accepted Answer Username",
-        "path": "acceptedAnswer.value.name"
-      },
-      {
-        "type": "JSON",
-        "header": "Accepted Answer Text",
-        "path": "acceptedAnswer.value.cooked"
-      },
-      {
-        "type": "JSON",
-        "header": "Accepted Answer Author",
-        "path": "acceptedAnswer.value.name"
-      },
-      {
-        "type": "JSON",
-        "header": "Accepted Answer Number",
-        "path": "acceptedAnswer.value.post_number"
-      },
-      {
-        "type": "JSON",
-        "header": "Accepted Answer Topic ID",
-        "path": "acceptedAnswer.value.topic_id"
-      },
-      {
-        "type": "JSON",
-        "header": "Accepted Answer is Accepted Answer",
-        "path": "acceptedAnswer.value.accepted_answer"
-      },
-      {
-        "type": "JSON",
-        "header": "Accepted Answer Avatar",
-        "path": "acceptedAnswer.value.sanitizedAvatarTemplate"
-      },
-      {
-        "type": "JSON",
-        "header": "Likes Received",
-        "path": "like_count"
-      },
-      {
-        "type": "JSON",
-        "header": "Views",
-        "path": "views"
-      }
-    ]
-  },
-  "transforms": [
-    {
-      "findAndReplace": {
-        "inputHeaders": {
-          "headers": [
-            "Date of Last Post",
-            "Date Created"
-          ]
+    "transforms": [
+        {
+            "findAndReplace": {
+                "inputHeaders": {
+                    "headers": [
+                        "Date of Last Post",
+                        "Date Created"
+                    ]
+                },
+                "valueToFind": {
+                    "regex": "T.*"
+                },
+                "replacement": ""
+            }
         },
-        "valueToFind": {
-          "regex": "T.*"
+        {
+            "formatDates": {
+                "inputHeaders": {
+                    "headers": [
+                        "Date of Last Post",
+                        "Date Created"
+                    ]
+                },
+                "inputFormat": "yyyy-MM-dd"
+            }
         },
-        "replacement": ""
-      }
-    },
-    {
-      "formatDates": {
-        "inputHeaders": {
-          "headers": [
-            "Date of Last Post",
-            "Date Created"
-          ]
+        {
+            "findAndReplace": {
+                "inputHeaders": {
+                    "headers": [
+                        "First Post Avatar",
+                        "Thread Avatar",
+                        "Accepted Answer Avatar"
+                    ]
+                },
+                "valueToFind": {
+                    "plainText": {
+                        "value": "{size}",
+                        "ignoreCase": false
+                    }
+                },
+                "replacement": "120"
+            }
         },
-        "inputFormat": "yyyy-MM-dd"
-      }
-    },
-    {
-      "findAndReplace": {
-        "inputHeaders": {
-          "headers": [
-            "First Post Avatar",
-            "Thread Avatar",
-            "Accepted Answer Avatar"
-          ]
+        {
+            "function": {
+                "inputHeaders": {
+                    "headers": [
+                        "First Post Avatar",
+                        "Thread Avatar",
+                        "Accepted Answer Avatar"
+                    ]
+                },
+                "plugin": "discourse_urlTransform",
+                "function": "fix_avatar_template"
+            }
+        }
+    ],
+    "mappings": [
+        {
+            "field": "discourse_lastPostedAt",
+            "header": "Date of Last Post",
+            "subfieldPath": []
         },
-        "valueToFind": {
-          "plainText": {
-            "value": "{size}",
-            "ignoreCase": false
-          }
+        {
+            "field": "discourse_firstDiscoursePost",
+            "header": "First Post is Accepted Answer",
+            "subfieldPath": [
+                {
+                    "name": "acceptedAnswer"
+                }
+            ]
         },
-        "replacement": "120"
-      }
-    },
-    {
-      "function": {
-        "inputHeaders": {
-          "headers": [
-            "First Post Avatar",
-            "Thread Avatar",
-            "Accepted Answer Avatar"
-          ]
+        {
+            "field": "discourse_firstDiscoursePost",
+            "header": "First Post Text",
+            "subfieldPath": [
+                {
+                    "name": "text"
+                }
+            ]
         },
-        "plugin": "discourse_urlTransform",
-        "function": "fix_avatar_template"
-      }
+        {
+            "field": "photoGallery",
+            "header": "Image Url",
+            "subfieldPath": [
+                {
+                    "name": "image"
+                },
+                {
+                    "name": "url"
+                }
+            ]
+        },
+        {
+            "field": "discourse_slug",
+            "header": "Slug",
+            "subfieldPath": []
+        },
+        {
+            "field": "discourse_replyCount",
+            "header": "Number of Replies",
+            "subfieldPath": []
+        },
+        {
+            "field": "discourse_categoryID",
+            "header": "Category ID",
+            "subfieldPath": []
+        },
+        {
+            "field": "discourse_firstDiscoursePost",
+            "header": "First Post Username",
+            "subfieldPath": [
+                {
+                    "name": "username"
+                }
+            ]
+        },
+        {
+            "field": "discourse_firstDiscoursePost",
+            "header": "First Post Topic ID",
+            "subfieldPath": [
+                {
+                    "name": "topicID"
+                }
+            ]
+        },
+        {
+            "field": "name",
+            "header": "Name",
+            "subfieldPath": []
+        },
+        {
+            "field": "discourse_firstDiscoursePost",
+            "header": "First Post Avatar",
+            "subfieldPath": [
+                {
+                    "name": "avatar"
+                },
+                {
+                    "name": "url"
+                }
+            ]
+        },
+        {
+            "field": "discourse_discourseThread",
+            "header": "Thread Avatar",
+            "subfieldPath": [
+                {
+                    "name": "avatar"
+                },
+                {
+                    "name": "url"
+                }
+            ]
+        },
+        {
+            "field": "entityId",
+            "header": "Entity ID",
+            "subfieldPath": []
+        },
+        {
+            "field": "discourse_postCount",
+            "header": "Number of Posts",
+            "subfieldPath": []
+        },
+        {
+            "field": "discourse_firstDiscoursePost",
+            "header": "First Post Number",
+            "subfieldPath": [
+                {
+                    "name": "postNumber"
+                }
+            ]
+        },
+        {
+            "field": "discourse_discourseThread",
+            "header": "Thread Author",
+            "subfieldPath": [
+                {
+                    "name": "author"
+                }
+            ]
+        },
+        {
+            "field": "discourse_discourseThread",
+            "header": "Thread Topic ID",
+            "subfieldPath": [
+                {
+                    "name": "topicID"
+                }
+            ]
+        },
+        {
+            "field": "discourse_firstDiscoursePost",
+            "header": "First Post Author",
+            "subfieldPath": [
+                {
+                    "name": "author"
+                }
+            ]
+        },
+        {
+            "field": "discourse_discourseThread",
+            "header": "Thread is Accepted Answer",
+            "subfieldPath": [
+                {
+                    "name": "acceptedAnswer"
+                }
+            ]
+        },
+        {
+            "field": "discourse_discourseThread",
+            "header": "Thread Number",
+            "subfieldPath": [
+                {
+                    "name": "postNumber"
+                }
+            ]
+        },
+        {
+            "field": "discourse_dateCreatedAt",
+            "header": "Date Created",
+            "subfieldPath": []
+        },
+        {
+            "field": "discourse_discourseThread",
+            "header": "Thread Username",
+            "subfieldPath": [
+                {
+                    "name": "username"
+                }
+            ]
+        },
+        {
+            "field": "discourse_discourseThread",
+            "header": "Thread Text",
+            "subfieldPath": [
+                {
+                    "name": "text"
+                }
+            ]
+        },
+        {
+            "field": "discourse_answerAccepted",
+            "header": "Accepted Answer is Accepted Answer",
+            "subfieldPath": [
+                {
+                    "name": "acceptedAnswer"
+                }
+            ]
+        },
+        {
+            "field": "discourse_answerAccepted",
+            "header": "Accepted Answer Text",
+            "subfieldPath": [
+                {
+                    "name": "text"
+                }
+            ]
+        },
+        {
+            "field": "discourse_answerAccepted",
+            "header": "Accepted Answer Username",
+            "subfieldPath": [
+                {
+                    "name": "username"
+                }
+            ]
+        },
+        {
+            "field": "discourse_answerAccepted",
+            "header": "Accepted Answer Topic ID",
+            "subfieldPath": [
+                {
+                    "name": "topicID"
+                }
+            ]
+        },
+        {
+            "field": "discourse_answerAccepted",
+            "header": "Accepted Answer Avatar",
+            "subfieldPath": [
+                {
+                    "name": "avatar"
+                },
+                {
+                    "name": "url"
+                }
+            ]
+        },
+        {
+            "field": "discourse_answerAccepted",
+            "header": "Accepted Answer Number",
+            "subfieldPath": [
+                {
+                    "name": "postNumber"
+                }
+            ]
+        },
+        {
+            "field": "discourse_answerAccepted",
+            "header": "Accepted Answer Author",
+            "subfieldPath": [
+                {
+                    "name": "author"
+                }
+            ]
+        },
+        {
+            "field": "discourse_likesReceived",
+            "header": "Likes Received",
+            "subfieldPath": []
+        },
+        {
+            "field": "discourse_views",
+            "header": "Views",
+            "subfieldPath": []
+        }
+    ],
+    "comprehensiveModeConfig": {
+        "comprehensiveSet": "ENTITIES_CREATED_BY_THIS_CONNECTOR",
+        "actionOnMissingEntities": "DELETE"
     }
-  ],
-  "mappings": [
-    {
-      "field": "discourse_lastPostedAt",
-      "header": "Date of Last Post",
-      "subfieldPath": []
-    },
-    {
-      "field": "discourse_firstDiscoursePost",
-      "header": "First Post is Accepted Answer",
-      "subfieldPath": [
-        {
-          "name": "acceptedAnswer"
-        }
-      ]
-    },
-    {
-      "field": "discourse_firstDiscoursePost",
-      "header": "First Post Text",
-      "subfieldPath": [
-        {
-          "name": "text"
-        }
-      ]
-    },
-    {
-      "field": "photoGallery",
-      "header": "Image Url",
-      "subfieldPath": [
-        {
-          "name": "image"
-        },
-        {
-          "name": "url"
-        }
-      ]
-    },
-    {
-      "field": "discourse_slug",
-      "header": "Slug",
-      "subfieldPath": []
-    },
-    {
-      "field": "discourse_replyCount",
-      "header": "Number of Replies",
-      "subfieldPath": []
-    },
-    {
-      "field": "discourse_categoryID",
-      "header": "Category ID",
-      "subfieldPath": []
-    },
-    {
-      "field": "discourse_firstDiscoursePost",
-      "header": "First Post Username",
-      "subfieldPath": [
-        {
-          "name": "username"
-        }
-      ]
-    },
-    {
-      "field": "discourse_firstDiscoursePost",
-      "header": "First Post Topic ID",
-      "subfieldPath": [
-        {
-          "name": "topicID"
-        }
-      ]
-    },
-    {
-      "field": "name",
-      "header": "Name",
-      "subfieldPath": []
-    },
-    {
-      "field": "discourse_firstDiscoursePost",
-      "header": "First Post Avatar",
-      "subfieldPath": [
-        {
-          "name": "avatar"
-        },
-        {
-          "name": "url"
-        }
-      ]
-    },
-    {
-      "field": "discourse_discourseThread",
-      "header": "Thread Avatar",
-      "subfieldPath": [
-        {
-          "name": "avatar"
-        },
-        {
-          "name": "url"
-        }
-      ]
-    },
-    {
-      "field": "entityId",
-      "header": "Entity ID",
-      "subfieldPath": []
-    },
-    {
-      "field": "discourse_postCount",
-      "header": "Number of Posts",
-      "subfieldPath": []
-    },
-    {
-      "field": "discourse_firstDiscoursePost",
-      "header": "First Post Number",
-      "subfieldPath": [
-        {
-          "name": "postNumber"
-        }
-      ]
-    },
-    {
-      "field": "discourse_discourseThread",
-      "header": "Thread Author",
-      "subfieldPath": [
-        {
-          "name": "author"
-        }
-      ]
-    },
-    {
-      "field": "discourse_discourseThread",
-      "header": "Thread Topic ID",
-      "subfieldPath": [
-        {
-          "name": "topicID"
-        }
-      ]
-    },
-    {
-      "field": "discourse_firstDiscoursePost",
-      "header": "First Post Author",
-      "subfieldPath": [
-        {
-          "name": "author"
-        }
-      ]
-    },
-    {
-      "field": "discourse_discourseThread",
-      "header": "Thread is Accepted Answer",
-      "subfieldPath": [
-        {
-          "name": "acceptedAnswer"
-        }
-      ]
-    },
-    {
-      "field": "discourse_discourseThread",
-      "header": "Thread Number",
-      "subfieldPath": [
-        {
-          "name": "postNumber"
-        }
-      ]
-    },
-    {
-      "field": "discourse_dateCreatedAt",
-      "header": "Date Created",
-      "subfieldPath": []
-    },
-    {
-      "field": "discourse_discourseThread",
-      "header": "Thread Username",
-      "subfieldPath": [
-        {
-          "name": "username"
-        }
-      ]
-    },
-    {
-      "field": "discourse_discourseThread",
-      "header": "Thread Text",
-      "subfieldPath": [
-        {
-          "name": "text"
-        }
-      ]
-    },
-    {
-      "field": "discourse_answerAccepted",
-      "header": "Accepted Answer is Accepted Answer",
-      "subfieldPath": [{
-        "name": "acceptedAnswer"
-      }]
-    },
-    {
-      "field": "discourse_answerAccepted",
-      "header": "Accepted Answer Text",
-      "subfieldPath": [{
-        "name": "text"
-      }]
-    },
-    {
-      "field": "discourse_answerAccepted",
-      "header": "Accepted Answer Username",
-      "subfieldPath": [{
-        "name": "username"
-      }]
-    },
-    {
-      "field": "discourse_answerAccepted",
-      "header": "Accepted Answer Topic ID",
-      "subfieldPath": [{
-        "name": "topicID"
-      }]
-    }, {
-      "field": "discourse_answerAccepted",
-      "header": "Accepted Answer Avatar",
-      "subfieldPath": [{
-          "name": "avatar"
-        },
-        {
-          "name": "url"
-        }
-      ]
-    },
-    {
-      "field": "discourse_answerAccepted",
-      "header": "Accepted Answer Number",
-      "subfieldPath": [{
-        "name": "postNumber"
-      }]
-    },
-    {
-      "field": "discourse_answerAccepted",
-      "header": "Accepted Answer Author",
-      "subfieldPath": [{
-        "name": "author"
-      }]
-    },
-    {
-      "field": "discourse_likesReceived",
-      "header": "Likes Received",
-      "subfieldPath": []
-    },
-    {
-      "field": "discourse_views",
-      "header": "Views",
-      "subfieldPath": []
-    }
-  ]
 }

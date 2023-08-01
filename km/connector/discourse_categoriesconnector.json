@@ -1,102 +1,104 @@
 {
-  "$id": "discourse_discourseCategoriesConnector",
-  "$schema": "https://schema.yext.com/config/km/connector/v2",
-  "displayName": "Discourse Categories Connector",
-  "entityType": "discourse_discourseCategory",
-  "source": {
-    "sourceConfig": {
-      "apiPushConfig": {
-        "app": "123672",
-        "dataFormat": "JSON",
-        "enabled": true
-      }
+    "$id": "discourse_discourseCategoriesConnector",
+    "$schema": "https://schema.yext.com/config/km/connector/v4",
+    "displayName": "Discourse Categories Connector",
+    "entityTypes": [
+        "discourse_discourseCategory"
+    ],
+    "source": {
+        "sourceConfig": {
+            "apiPushConfig": {
+                "dataFormat": "JSON",
+                "enabled": true
+            }
+        },
+        "baseSelector": {
+            "type": "JSON",
+            "header": "Entity Container",
+            "path": "categories"
+        },
+        "selectors": [
+            {
+                "type": "JSON",
+                "header": "Entity ID",
+                "path": "id"
+            },
+            {
+                "type": "JSON",
+                "header": "Name",
+                "path": "name"
+            },
+            {
+                "type": "JSON",
+                "header": "Slug",
+                "path": "slug"
+            },
+            {
+                "type": "JSON",
+                "header": "Number of Posts",
+                "path": "post_count"
+            },
+            {
+                "type": "JSON",
+                "header": "Number of Topics",
+                "path": "topic_count"
+            },
+            {
+                "type": "JSON",
+                "header": "Description",
+                "path": "description_text"
+            },
+            {
+                "type": "JSON",
+                "header": "Logo",
+                "path": "uploaded_logo.url"
+            }
+        ]
     },
-    "baseSelector": {
-      "type": "JSON",
-      "header": "Entity Container",
-      "path": "categories"
-    },
-    "selectors": [
-      {
-        "type": "JSON",
-        "header": "Entity ID",
-        "path": "id"
-      },
-      {
-        "type": "JSON",
-        "header": "Name",
-        "path": "name"
-      },
-      {
-        "type": "JSON",
-        "header": "Slug",
-        "path": "slug"
-      },
-      {
-        "type": "JSON",
-        "header": "Number of Posts",
-        "path": "post_count"
-      },
-      {
-        "type": "JSON",
-        "header": "Number of Topics",
-        "path": "topic_count"
-      },
-      {
-        "type": "JSON",
-        "header": "Description",
-        "path": "description_text"
-      },
-      {
-        "type": "JSON",
-        "header": "Logo",
-        "path": "uploaded_logo.url"
-      }
-    ]
-  },
-  "transforms": [
-    
-  ],
-  "mappings": [
-
-    {
-      "field": "name",
-      "header": "Name",
-      "subfieldPath": []
-    },
-    {
-      "field": "entityId",
-      "header": "Entity ID",
-      "subfieldPath": []
-    },
-    {
-      "field": "discourse_slug",
-      "header": "Slug",
-      "subfieldPath": []
-    },
-    {
-      "field": "discourse_postCount",
-      "header": "Number of Posts",
-      "subfieldPath": []
-    },
-    {
-      "field": "discourse_topicCount",
-      "header": "Number of Topics",
-      "subfieldPath": []
-    },
-    {
-      "field": "description",
-      "header": "Description",
-      "subfieldPath": []
-    },
-    {
-      "field": "discourse_avatar",
-      "header": "Logo",
-      "subfieldPath": [
+    "transforms": [],
+    "mappings": [
         {
-          "name": "url"
+            "field": "name",
+            "header": "Name",
+            "subfieldPath": []
+        },
+        {
+            "field": "entityId",
+            "header": "Entity ID",
+            "subfieldPath": []
+        },
+        {
+            "field": "discourse_slug",
+            "header": "Slug",
+            "subfieldPath": []
+        },
+        {
+            "field": "discourse_postCount",
+            "header": "Number of Posts",
+            "subfieldPath": []
+        },
+        {
+            "field": "discourse_topicCount",
+            "header": "Number of Topics",
+            "subfieldPath": []
+        },
+        {
+            "field": "description",
+            "header": "Description",
+            "subfieldPath": []
+        },
+        {
+            "field": "discourse_avatar",
+            "header": "Logo",
+            "subfieldPath": [
+                {
+                    "name": "url"
+                }
+            ]
         }
-      ]
+    ],
+    "comprehensiveModeConfig": {
+        "comprehensiveSet": "ENTITIES_CREATED_BY_THIS_CONNECTOR",
+        "actionOnMissingEntities": "DELETE"
     }
-  ]
 }
