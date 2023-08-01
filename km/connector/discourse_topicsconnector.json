@@ -442,9 +442,12 @@
             "field": "discourse_answerAccepted",
             "header": "Accepted Answer Text",
             "subfieldPath": [
-                {
-                    "name": "text"
-                }
+        {
+          "name": "text"
+        },
+        {
+          "name": "markdown"
+        }
             ]
         },
         {
